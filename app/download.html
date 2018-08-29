@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>사용자_FO_MO</title>
+<link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+<script type="text/javascript">
+function iosDownload() {
+	location.href = "itms-services://?action=download-manifest&url=https://dl.dropbox.com/s/u35znsdslncf6y8/shop_prd.plist";
+}
+function androidDownload() {
+    location.href = "https://play.google.com/store/apps/details?id=com.instarwaz.shopapp";
+}
+</script>
+<!-- 컨텐츠 시작 -->
+<main class="contain et app">
+
+    <div class="hdts">
+        <div class="logo"><img src="./images/app/app_logo.png" alt=""></div>
+        <div class="info">
+            <div class="tit">인테리어 스타</div>
+            <div class="txt">인스타워즈 제휴점 앱</div>
+            <div class="sts">인테리어 전문플랫폼</div>
+        </div>
+    </div>
+    <div class="ctns">
+        <div class="txt">인테리어 스타 앱을 다운로드하여 설치해 주세요.</div>
+        <div class="aps apple"><a href="javascript:;" onclick="iosDownload()"><img src="./images/app/app_apple.png" alt="App Store에서 다운로드 하기"></a></div>
+        <div class="aps google"><a href="javascript:;" onclick="androidDownload()"><img src="./images/app/app_google.png" alt="GET IT ON Google Play"></a></div>
+        <ul class="info">
+            <li>
+                <div class="dt"><strong>iOS(아이폰)의 경우</strong> 앱 다운로드 후 설정 필요</div>
+                <div class="dd">설정 &gt; 일반 &gt; 기기관리 &gt; <em>‘Instarwaz’를 신뢰함</em> 선택</div>
+            </li>
+            <li>
+                <div class="dt"><strong>안드로이드의 경우</strong></div>
+                <div class="dd">구글플레이로 이동 후 다운로드하여 설치</div>
+            </li>
+        </ul>
+        <div class="ver">
+            <strong class="t">* 변경사항</strong>
+            <p class="v">1.0.0 최초 배포</p>
+        </div>
+    </div>
+
+</main>
+<!-- 컨텐츠 끝 -->
+
+
+</body>
+</html>
