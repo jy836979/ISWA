@@ -4,16 +4,18 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>사용자_FO_MO</title>
+<title>제휴점 앱 다운로드</title>
 <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
 <script type="text/javascript">
 function iosDownload() {
-	location.href = "itms-services://?action=download-manifest&url=https://jy836979.github.io/ISWA/app/dl/qa_shop.plist";
+	// location.href = "itms-services://?action=download-manifest&url=https://jy836979.github.io/ISWA/app/dl/shop_qa.plist";
+    location.href = "itms-services://?action=download-manifest&url=https://jy836979.github.io/ISWA/app/dl/shop_prd.plist";
 }
 function androidDownload() {
-    location.href = "https://jy836979.github.io/ISWA/app/dl/qa_shop.apk";
+    // location.href = "https://jy836979.github.io/ISWA/app/dl/shop_qa.apk";
+    location.href = "dl/shop_prd.apk";
 }
 </script>
 <!-- 컨텐츠 시작 -->
@@ -43,7 +45,7 @@ function androidDownload() {
         </ul>
         <div class="ver">
             <strong class="t">* 변경사항</strong>
-            <p class="v">1.0.0 최초 배포</p>
+            <p class="v">1.0.1 커머스 지원</p>
         </div>
     </div>
 

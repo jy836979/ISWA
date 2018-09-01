@@ -1,0 +1,42 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <!-- array of downloads. -->
+   <key>items</key>
+   <array>
+       <dict>
+           <!-- an array of assets to download -->
+           <key>assets</key>
+           <array>
+               <!-- software-package: the ipa to install. -->
+               <dict>
+                   <!-- required.  the asset kind. -->
+                   <key>kind</key>
+                   <string>software-package</string>
+                   <key>url</key>
+                   <string>https://jy836979.github.io/ISWA/app/dl/shop_prd.ipa</string>
+               </dict>
+           </array><key>metadata</key>
+           <dict>
+               <!-- required -->
+               <key>bundle-identifier</key>
+               <string>com.instarwaz.shopapp.ent</string>
+               <!-- optional (software only) -->
+               <key>bundle-version</key>
+               <string>1.0.1</string>
+               <!-- required. the download kind. -->
+               <key>kind</key>
+               <string>software</string>
+               <!-- optional. displayed during download; -->
+               <!-- typically company name -->
+               <key>subtitle</key>
+               <string>인스타워즈</string>
+               <!-- required. the title to display during the download. -->
+               <key>title</key>
+               <string>인테리어 스타</string>
+           </dict>
+       </dict>
+   </array>
+</dict>
+</plist>
