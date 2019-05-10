@@ -4,7 +4,20 @@
         <meta charset="utf-8">
         <title>SCC Landing Script</title>
         <script type="text/javascript">
-            location.href="scc://deeplink";
+            setTimeout(
+                function() {
+                    var now = +new Date();
+                    if ( now - startTime < 1000){
+                        // var marketUrl = "";
+                        // if( isAndroid ){
+                        //     marketUrl = androidMarketUrl;
+                        // }else if( isiOS ){
+                        //     marketUrl = iosMarketUrl;
+                        // }
+                        location.href = "scc://deeplink";
+                    }
+                }
+            , 500);
         </script>
     </head>
     <body>SCC Landing Script</body>
