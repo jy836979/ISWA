@@ -22,27 +22,33 @@
                 location.href=url;
 
             } else {
-                var startTime = +new Date();
-                setTimeout(
-                    function() {
-                        var now = +new Date();
-                        if ( now - startTime < 1000){
-                            // var marketUrl = "";
-                            // if( isAndroid ){
-                            //     marketUrl = androidMarketUrl;
-                            // }else if( isiOS ){
-                            //     marketUrl = iosMarketUrl;
-                            // }
-                            // var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
-                            // location.href="intent://deeplink" + params + "#Intent;scheme=scc;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
-                            if(confirm("앱을 실행 하시겠습니까?") == true){
-                                var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
-                                location.href="intent://deeplink" + params + "#Intent;scheme=scc;package=com.seoul.scc;end";
-    //                             location.href="intent://default?version=1#Intent;scheme=scc://deeplink" + params + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
-                            }
-                        }
-                    }
-                , 500);
+                var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
+                if(confirm("앱을 실행 하시겠습니까?") == true){
+                    location.href="intent://deeplink" + params + "#Intent;scheme=scc;package=com.seoul.scc;end";
+//                             location.href="intent://default?version=1#Intent;scheme=scc://deeplink" + params + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
+                }
+//                 var startTime = +new Date();
+//                 setTimeout(
+//                     function() {
+//                         var now = +new Date();
+//                         if ( now - startTime < 1000){
+//                             // var marketUrl = "";
+//                             // if( isAndroid ){
+//                             //     marketUrl = androidMarketUrl;
+//                             // }else if( isiOS ){
+//                             //     marketUrl = iosMarketUrl;
+//                             // }
+//                             // var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
+//                             // location.href="intent://deeplink" + params + "#Intent;scheme=scc;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
+
+//                             var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
+//                             if(confirm("앱을 실행 하시겠습니까?") == true){
+//                                 location.href="intent://deeplink" + params + "#Intent;scheme=scc;package=com.seoul.scc;end";
+//     //                             location.href="intent://default?version=1#Intent;scheme=scc://deeplink" + params + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
+//                             }
+//                         }
+//                     }
+//                 , 500);
             }
             
         </script>
