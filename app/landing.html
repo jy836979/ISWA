@@ -22,11 +22,7 @@
                 location.href=url;
 
             } else {
-                var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
-                if(confirm("앱을 실행 하시겠습니까?") == true){
-//                     location.href="intent://deeplink" + params + "#Intent;scheme=scc;package=com.seoul.scc;end";
-                    location.href="intent://default?version=1#Intent;scheme=scc://deeplink" + params + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
-                }
+                go_app();
 //                 var startTime = +new Date();
 //                 setTimeout(
 //                     function() {
@@ -51,6 +47,13 @@
 //                 , 500);
             }
             
+            function go_app() {
+                var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
+                if(confirm("앱을 실행 하시겠습니까?") == true){
+                    location.href="intent://deeplink" + params + "#Intent;scheme=scc;package=com.seoul.scc;end";
+//                     location.href="intent://default?version=1#Intent;scheme=scc://deeplink" + params + ";action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
+                }
+            }
         </script>
     </head>
     <body>SCC Landing Script</body>
