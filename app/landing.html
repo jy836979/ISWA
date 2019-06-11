@@ -6,8 +6,22 @@
         <script type="text/javascript">
             var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
  
-            if (varUA.match('android') != null) { 
+            if (varUA.indexOf("iphone")>-1||varUA.indexOf("ipad")>-1||varUA.indexOf("ipod")>-1) { 
                 
+                var appstoreUrl = "http://itunes.apple.com/kr/app/id1318541802?mt=8";
+                var url = "sccapp://landingPage??url=http%3A%2F%2Fm.naver.com&target=new&version=6";
+                var clickedAt = +new Date;
+                naverAppCheckTimer = setTimeout(function() {
+                    if (+new Date - clickedAt < 2000){
+                        if (window.confirm("서울시민카드 최신 버전이 설치되어 있지 않습니다.\n설치페이지로 이동하시겠습니까?"))
+                        {
+                            location.href = appstoreUrl;
+                        }
+                    }
+                }, 1500);
+                location.href=url;
+
+            } else {
                 var startTime = +new Date();
                 setTimeout(
                     function() {
@@ -26,22 +40,6 @@
                         }
                     }
                 , 500);
-                
-            } else if (varUA.indexOf("iphone")>-1||varUA.indexOf("ipad")>-1||varUA.indexOf("ipod")>-1) { 
-                
-                var appstoreUrl = "http://itunes.apple.com/kr/app/id1318541802?mt=8";
-                var url = "sccapp://landingPage??url=http%3A%2F%2Fm.naver.com&target=new&version=6";
-                var clickedAt = +new Date;
-                naverAppCheckTimer = setTimeout(function() {
-                    if (+new Date - clickedAt < 2000){
-                        if (window.confirm("서울시민카드 최신 버전이 설치되어 있지 않습니다.\n설치페이지로 이동하시겠습니까?"))
-                        {
-                            location.href = appstoreUrl;
-                        }
-                    }
-                }, 1500);
-                location.href=url;
-
             }
             
         </script>
