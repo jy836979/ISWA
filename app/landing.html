@@ -27,22 +27,7 @@
                     function() {
                         var now = +new Date();
                         if ( now - startTime < 1000){
-                            // var marketUrl = "";
-                            // if( isAndroid ){
-                            //     marketUrl = androidMarketUrl;
-                            // }else if( isiOS ){
-                            //     marketUrl = iosMarketUrl;
-                            // }
-                            // var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
-                            // location.href="intent://deeplink" + params + "#Intent;scheme=scc;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
-
-                            // var params = "?url=http%3A%2F%2Fm.naver.com&target=new&version=6";
-                            // if(confirm("앱을 실행 하시겠습니까?") == true){
-                            //     location.href="intent://deeplink" + params + "#Intent;scheme=scc;package=com.seoul.scc;end";
-                            // }
-                            // go_app();
-                            var link = document.getElementById('start');
-                            link.click();
+                            go_app();
                         }
                     }
                 , 500);
@@ -53,6 +38,20 @@
                 location.href="intent://deeplink" + params + "#Intent;scheme=scc;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.seoul.scc;end";
             }
         </script>
+        <style>
+		.btn {
+			background-color: #87CEEB;
+			padding: 15px 30px;
+			margin: 2px;
+			border: none;
+			color: black;
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+			display: inline-block;
+			cursor: pointer;
+		}
+	</style>
     </head>
-    <body><a href="javascript:go_app()" id="start">Landing Script</a></body>
+    <body><a href="javascript:go_app()" class="btn">Landing Script</a></body>
 </html>
